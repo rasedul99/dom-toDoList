@@ -15,10 +15,15 @@ document.getElementById("add-item-btn").addEventListener("click", function () {
     document.getElementById("input-value").value = "";
 
     const deleteBtn = document.getElementsByClassName("delete-btn");
-    // console.log(deletesBtn);
+    const doneBtn = document.getElementsByClassName("done-btn");
     for (const button of deleteBtn) {
       button.addEventListener("click", function (e) {
         e.target.parentNode.parentNode.style.display = "none";
+      });
+    }
+    for (const button of doneBtn) {
+      button.addEventListener("click", function (e) {
+        e.target.parentNode.parentNode.style.textDecoration = "line-through";
       });
     }
   }
